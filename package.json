@@ -1,0 +1,41 @@
+{
+  "name": "vite-plugin-deps-cache",
+  "type": "module",
+  "version": "0.1.1",
+  "description": "Cache optimized dependencies continuously",
+  "keywords": [
+    "vite-plugin"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "tsup index.ts --dts --format cjs,esm",
+    "lint": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "vite": ">= 3"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "fs-extra": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "tsup": "^6.5.0"
+  }
+}
