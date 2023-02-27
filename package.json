@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "dev": "npm run build -- --watch",
-    "build": "tsup index.ts --dts --format cjs,esm",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
     "lint": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "prepublishOnly": "npm run build"
