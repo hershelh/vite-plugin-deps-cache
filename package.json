@@ -4,7 +4,10 @@
   "version": "0.1.1",
   "description": "Cache optimized dependencies continuously",
   "keywords": [
-    "vite-plugin"
+    "vite-plugin",
+    "vite",
+    "pre-bundle",
+    "optimize"
   ],
   "sideEffects": false,
   "exports": {
